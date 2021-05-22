@@ -1,14 +1,28 @@
 {
- 
+ 
   "dependencies": {
-    "fs": "^0.0.1-security",
-    "node-cron": "^3.0.0",
-    "request": "^2.88.2",
-    "update-json-file": "^1.1.1"
+ 
+   
+  "express": "^4.17.1",
+ 
+   
+  "fs": "^0.0.1-security",
+ 
+   
+  "node-cron": "^3.0.0",
+ 
+   
+  "request": "^2.88.2",
+ 
+   
+  "update-json-file": "^1.1.1"
+ 
   },
+ 
   "scripts": {
-    "start": "node telegram.js"
-
+ 
+   
+  "start": "node telegram.js"
+ 
   }
-  
 }

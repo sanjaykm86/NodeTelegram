@@ -1,3 +1,4 @@
+const express = require('express');
 const request = require('request')
 const fs = require('fs')
 const updateJsonFile = require('update-json-file')
@@ -6,6 +7,7 @@ const cron = require('node-cron')
 let currentUpdateId = ""
 let latestUpdateId = ""
 
+var app = express()
 
 const token = "1841810592:AAEQPj7L8LJCVFWjpmUUxj2ng_hsxTucxqk"
 let chat_id = ""
@@ -70,5 +72,11 @@ const task = cron.schedule('*/10 * * * * *',()=>{
 })
 
 task.start();
+
+const port = process.env.port || 5000
+
+var server = app.listen(port, function () {
+    console.log(`Server is running at ${port}`);
+})
 
 
