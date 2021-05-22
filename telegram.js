@@ -32,6 +32,7 @@ const task = cron.schedule('*/10 * * * * *',()=>{
         }
         else
         {
+            //console.log(body)
             let update = body["result"]
             let message = update[update.length-1].message
             let chat_id = message.from.id 
