@@ -71,12 +71,13 @@ const task = cron.schedule('*/10 * * * * *',()=>{
     
 })
 
-task.start();
 
-const port = process.env.port || 5002
+
+const port = process.env.PORT || 5002
 
 var server = app.listen(port,'0.0.0.0', function () {
     console.log(`Server is running at ${port}`);
+    task.start();
 })
 
 
